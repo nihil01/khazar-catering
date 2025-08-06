@@ -1,0 +1,49 @@
+type Certificates {
+    images: String
+}
+
+type AboutShort {
+    subtext: String
+    description: String
+    services: String
+    lang: String
+}
+
+type Hero {
+    images: String
+    main_text: String
+    subtext: String
+    details: String
+    lang: String
+}
+
+type Employee {
+    name: String
+    position: String
+    image: String
+}
+
+type Gallery {
+    name: String
+    image: String
+}
+
+type Partners {
+    images: String
+}
+
+type About {
+    heading: String
+    abilities: String
+    lang: String
+}
+
+type Query {
+    getAboutShorts(lang: String): AboutShort
+    getAbout(lang: String): About
+    getHeroes(lang: String): Hero
+    getAllPartners: [Partners]
+    getAllEmployees: [Employee]
+    getAllCertificates: [Certificates]
+    getGallery: [Gallery]
+}
